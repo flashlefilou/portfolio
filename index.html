@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthony Merlin · Computer Science Student · Portfolio</title>
+  <meta name="description" content="Portfolio of Anthony Merlin, second-year computer science student at the IUT of Annecy (France), looking for a software development internship from April 2027.">
+  <meta name="author" content="Anthony Merlin">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23121110'/%3E%3Ctext x='5' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%23f2a93b'%3E%3E_%3C/text%3E%3C/svg%3E">
+  <script>
+    /* Apply the saved or system theme before the page paints, to avoid a flash. */
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.classList.add('js');
+      var l = null;
+      try { l = localStorage.getItem('lang'); } catch (e) {}
+      if (l === 'fr') document.documentElement.setAttribute('lang', 'fr');
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="wip-banner" role="note">
+    <span class="wip-emoji" aria-hidden="true">🚧</span>
+    <span>Under construction: some screenshots and projects are still on their way.</span>
+  </div>
+
+  <!-- ===================== HEADER / NAVIGATION ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Anthony Merlin, back to top">
+        <span class="brand-prompt" aria-hidden="true">&gt;_</span>
+        <span class="brand-name">anthony.merlin</span>
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <button class="nav-toggle icon-btn" type="button" aria-expanded="false" aria-controls="nav-list">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-small btn-primary" type="button" data-open-cv>
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M7 3h7l5 5v13H7z M14 3v5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          CV
+        </button>
+        <button class="lang-toggle" type="button" lang="fr" aria-label="Read this page in French">FR</button>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch to light theme">
+          <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="cmd" aria-hidden="true"><span class="cmd-path">~</span> $ whoami</p>
+          <h1 id="hero-title">Anthony Merlin</h1>
+          <p class="hero-role">Computer science student, IUT of Annecy</p>
+          <p class="hero-lead">I build desktop applications in C#, design PostgreSQL databases and set up Linux servers. I am looking for a 10- to 12-week software development internship starting in April 2027.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#portfolio">See my projects</a>
+            <button class="btn btn-ghost" type="button" data-open-cv>View my CV</button>
+          </div>
+          <ul class="hero-meta">
+            <li>Vallières-sur-Fier, France</li>
+            <li>Available from April 2027</li>
+            <li><a href="https://github.com/flashlefilou" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/anthony-merlin-8452ab316/" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <!-- Interactive terminal (progressive enhancement: buttons work without typing) -->
+        <div class="terminal" aria-label="Interactive terminal">
+          <div class="terminal-bar">
+            <span class="terminal-title">anthony@portfolio: ~</span>
+            <span class="terminal-hint">type <kbd>help</kbd></span>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-output" id="terminal-output" role="log" aria-live="polite" aria-label="Terminal output">
+              <p class="t-line t-muted">Welcome. This terminal is a shortcut to the rest of the page.</p>
+              <p class="t-line t-muted">Try <span class="t-accent">help</span>, <span class="t-accent">ls projects</span> or <span class="t-accent">open benevolt</span>.</p>
+            </div>
+            <form class="terminal-form" id="terminal-form" autocomplete="off">
+              <label for="terminal-input" class="t-prompt"><span class="cmd-path">~</span> $</label>
+              <input id="terminal-input" class="terminal-input" type="text" spellcheck="false" autocapitalize="off" aria-label="Type a command, then press Enter">
+            </form>
+          </div>
+          <div class="terminal-chips" aria-label="Quick commands">
+            <button type="button" class="chip" data-cmd="help">help</button>
+            <button type="button" class="chip" data-cmd="ls projects">ls projects</button>
+            <button type="button" class="chip" data-cmd="skills">skills</button>
+            <button type="button" class="chip" data-cmd="cv">cv</button>
+            <button type="button" class="chip" data-cmd="contact">contact</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="cmd" aria-hidden="true"><span class="cmd-path">~</span> $ cat about.md</p>
+          <h2 id="about-title">About me</h2>
+        </header>
+
+        <div class="about-grid">
+          <figure class="about-photo reveal">
+            <img src="img/me.jpg" alt="Portrait of Anthony Merlin" width="320" height="320" data-fallback="AM">
+          </figure>
+
+          <div class="about-text reveal">
+            <p class="about-lead">I am in the second year of a Technical Bachelor's Degree in Computer Science (BUT Informatique, application development track) at the IUT of Annecy, University of Savoie Mont Blanc.</p>
+            <p>I am adaptable and rigorous, and I have led a team under pressure in a fast-food restaurant while studying. I am looking for a 10- to 12-week internship in software development, starting in April 2027, anywhere in the Auvergne-Rhône-Alpes region. I want to apply what I have learnt in a real team and see what a developer's day-to-day work looks like.</p>
+            <p>Outside computing, I restored a 1999 Honda Civic with a friend and I have always maintained my own motorcycle myself.</p>
+          </div>
+
+          <dl class="facts reveal">
+            <div><dt>Studying</dt><dd>BUT Informatique, 2nd year</dd></div>
+            <div><dt>Looking for</dt><dd>Internship, April 2027, 10 to 12 weeks</dd></div>
+            <div><dt>Based in</dt><dd>Vallières-sur-Fier (74), France</dd></div>
+            <div><dt>Mobility</dt><dd>Driving licence B, own car</dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:Anthony.Merlin@etu.univ-smb.fr">Anthony.Merlin@etu.univ-smb.fr</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="cmd" aria-hidden="true"><span class="cmd-path">~</span> $ cat skills.md</p>
+          <h2 id="skills-title">Skills</h2>
+        </header>
+
+        <div class="skills-grid">
+          <div class="panel reveal">
+            <div class="panel-head">
+              <h3>Technical skills</h3>
+              <p class="scale-legend"><span class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></span> beginner <span aria-hidden="true">→</span> expert <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></p>
+            </div>
+
+            <ul class="skill-list">
+              <li class="skill-group">Designing object-oriented applications</li>
+              <li class="skill"><span>C# / .NET, WPF (XAML)</span><span class="dots" role="img" aria-label="Level 4 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+
+              <li class="skill-group">Creating and querying databases</li>
+              <li class="skill"><span>SQL, PostgreSQL, PL/pgSQL</span><span class="dots" role="img" aria-label="Level 4 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+
+              <li class="skill-group">Designing dynamic webpages</li>
+              <li class="skill"><span>HTML / CSS</span><span class="dots" role="img" aria-label="Level 4 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+              <li class="skill"><span>JavaScript (Phaser 3)</span><span class="dots" role="img" aria-label="Level 3 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+              <li class="skill"><span>PHP, WordPress</span><span class="dots" role="img" aria-label="Level 2 out of 5"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></li>
+
+              <li class="skill-group">Designing software architecture</li>
+              <li class="skill"><span>UML, MERISE, PowerAMC</span><span class="dots" role="img" aria-label="Level 3 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+
+              <li class="skill-group">Administrating Linux servers</li>
+              <li class="skill"><span>Debian, Ubuntu, Apache, Nginx, SSH</span><span class="dots" role="img" aria-label="Level 3 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+
+              <li class="skill-group">Version control</li>
+              <li class="skill"><span>Git / GitHub</span><span class="dots" role="img" aria-label="Level 3 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+
+              <li class="skill-group">Networking and security</li>
+              <li class="skill"><span>TCP/IP, IP addressing, AES, UFW firewall</span><span class="dots" role="img" aria-label="Level 2 out of 5"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></li>
+
+              <li class="skill-group">Procedural programming</li>
+              <li class="skill"><span>Python</span><span class="dots" role="img" aria-label="Level 2 out of 5"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></li>
+            </ul>
+
+            <dl class="tools">
+              <div><dt>Operating systems</dt><dd>Windows, Linux; basic macOS</dd></div>
+              <div><dt>Tools</dt><dd>Visual Studio, VS Code, VirtualBox, pgAdmin, Microsoft Office</dd></div>
+              <div><dt>Methods</dt><dd>Agile / Scrum</dd></div>
+              <div><dt>Self-taught</dt><dd>PowerShell and AutoHotkey scripting, PC hardware troubleshooting</dd></div>
+            </dl>
+          </div>
+
+          <div class="skills-side">
+            <div class="panel reveal">
+              <h3>Soft skills</h3>
+              <ul class="soft-list">
+                <li><strong>Curious</strong><span>I taught myself PowerShell and AutoHotkey, and I like finding out how operating systems and games are built.</span></li>
+                <li><strong>Calm under pressure</strong><span>As a shift leader, I kept a crew of 10 running through rush hours.</span></li>
+                <li><strong>Well-organised</strong><span>I plan my week around classes, a part-time job and team projects.</span></li>
+                <li><strong>Team leader</strong><span>I trained new crew members and handled difficult customer situations.</span></li>
+              </ul>
+            </div>
+
+            <div class="panel reveal">
+              <h3>Languages</h3>
+              <ul class="lang-list">
+                <li><span class="lang">French</span><span class="lang-level">Native speaker</span><span class="bar" role="img" aria-label="Native"><i style="--w:100%"></i></span></li>
+                <li><span class="lang">English</span><span class="lang-level">Intermediate (B1)</span><span class="bar" role="img" aria-label="B1, intermediate"><i style="--w:50%"></i></span></li>
+                <li><span class="lang">Italian</span><span class="lang-level">Elementary (A2)</span><span class="bar" role="img" aria-label="A2, elementary"><i style="--w:33%"></i></span></li>
+                <li><span class="lang">Romanian</span><span class="lang-level">Basic understanding (A1)</span><span class="bar" role="img" aria-label="A1, basic understanding"><i style="--w:17%"></i></span></li>
+              </ul>
+              <p class="note">Scale: A1, A2, B1, B2, C1, C2 (Common European Framework).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE + EDUCATION ===================== -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="cmd" aria-hidden="true"><span class="cmd-path">~</span> $ git log --reverse-chronological</p>
+          <h2 id="experience-title">Experience</h2>
+        </header>
+
+        <div class="exp-grid">
+          <div class="exp-col reveal">
+            <h3 class="col-title">University projects (SAÉ)</h3>
+            <ol class="timeline">
+              <li>
+                <p class="tl-date">2026, in progress</p>
+                <h4>Benevolt, volunteering platform</h4>
+                <p class="tl-org">University project (SAÉ 3.01), fictional client brief, team project · IUT of Annecy, Annecy, France</p>
+                <p>Designing a platform that matches volunteers with associations: UML design file, then the PostgreSQL database and its dataset.</p>
+                <button class="link-btn" type="button" data-open-project="benevolt">Read the case study</button>
+              </li>
+              <li>
+                <p class="tl-date">2026</p>
+                <h4>YAASystem, WordPress hosting on a Raspberry Pi</h4>
+                <p class="tl-org">University project (SAÉ), fictional company, two-person team · IUT of Annecy, Annecy, France</p>
+                <p>Deploying a LEMP stack on 1 GB of RAM, securing the server and running load tests with zero failed requests.</p>
+                <button class="link-btn" type="button" data-open-project="yaasystem">See project details</button>
+              </li>
+              <li>
+                <p class="tl-date">2026</p>
+                <h4>Class booking application (Basic-Fit clone)</h4>
+                <p class="tl-org">University project (SAÉ), fictional project, three-person team · IUT of Annecy, Annecy, France</p>
+                <p>Writing a 32-page software requirements specification with UML diagrams, a schedule and screen mock-ups.</p>
+                <button class="link-btn" type="button" data-open-project="basicfit">See project details</button>
+              </li>
+              <li>
+                <p class="tl-date">Dec 2025</p>
+                <h4>MotorBike Highway, 2D video game</h4>
+                <p class="tl-org">University project (SAÉ 1.01 &amp; 1.02), two-person team · IUT of Annecy, Annecy, France</p>
+                <p>Designing and developing a highway-dodging game in C# and WPF, with a test plan and validation tests.</p>
+                <button class="link-btn" type="button" data-open-project="motorbike">See project details</button>
+              </li>
+              <li>
+                <p class="tl-date">2025</p>
+                <h4>Matski, HR database</h4>
+                <p class="tl-org">University project (SAÉ), fictional company, individual work · IUT of Annecy, Annecy, France</p>
+                <p>Reverse-engineering an existing database, writing business queries and designing an extension with a GDPR analysis.</p>
+                <button class="link-btn" type="button" data-open-project="matski">See project details</button>
+              </li>
+            </ol>
+          </div>
+
+          <div class="exp-col reveal">
+            <h3 class="col-title">Part-time jobs</h3>
+            <ol class="timeline">
+              <li>
+                <p class="tl-date">May 2026 – Present</p>
+                <h4>Fruit and vegetable department assistant</h4>
+                <p class="tl-org">Hyper U (hypermarket, food retail, 190 employees) · Rumilly, France</p>
+                <p>Restocking the fruit and vegetable section; answering customers' questions.</p>
+              </li>
+              <li>
+                <p class="tl-date">Sep 2025 – May 2026</p>
+                <h4>Crew member, then shift team leader</h4>
+                <p class="tl-org">Burger King (fast-food restaurant, 30 employees) · Rumilly, France</p>
+                <p>Coordinating a team of 10 crew members during rush hours alongside another shift leader; training new crew members; handling difficult customer situations.</p>
+              </li>
+            </ol>
+
+            <h3 class="col-title" id="education">Education</h3>
+            <ol class="timeline">
+              <li>
+                <p class="tl-date">2025 – 2028</p>
+                <h4>BUT Informatique</h4>
+                <p class="tl-org">IUT of Annecy, University of Savoie Mont Blanc · Annecy, France</p>
+                <p>Technical Bachelor's Degree in Computer Science: 3-year undergraduate degree, second year in progress. Track A: application development (design, development, validation).</p>
+              </li>
+              <li>
+                <p class="tl-date">2022 – 2025</p>
+                <h4>Baccalauréat STI2D, spécialité SIN</h4>
+                <p class="tl-org">Lycée de l'Albanais (high school) · Rumilly, France</p>
+                <p>Technological high school diploma specialising in information and digital systems, with honours.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PORTFOLIO ===================== -->
+    <section class="section section-alt" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="cmd" aria-hidden="true"><span class="cmd-path">~</span> $ ls projects/</p>
+          <h2 id="portfolio-title">Portfolio</h2>
+          <p class="section-intro">Every IT project I have worked on, finished or not. My best work comes first. Pick a technology to filter the list, then open a project for the full story.</p>
+        </header>
+
+        <div class="filters" role="group" aria-label="Filter projects by technology">
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-filter="uml" aria-pressed="false">UML / MERISE</button>
+          <button type="button" class="filter" data-filter="sql" aria-pressed="false">SQL / PostgreSQL</button>
+          <button type="button" class="filter" data-filter="csharp" aria-pressed="false">C# / WPF</button>
+          <button type="button" class="filter" data-filter="linux" aria-pressed="false">Linux / Nginx</button>
+          <button type="button" class="filter" data-filter="web" aria-pressed="false">HTML / CSS / JS</button>
+          <button type="button" class="filter" data-filter="php" aria-pressed="false">PHP / WordPress</button>
+          <button type="button" class="filter" data-filter="git" aria-pressed="false">Git / GitHub</button>
+          <button type="button" class="filter" data-filter="scrum" aria-pressed="false">Scrum</button>
+        </div>
+        <p class="filter-status" id="filter-status" role="status" aria-live="polite"></p>
+
+        <ul class="tiles" id="tiles">
+          <li class="tile tile-featured" id="project-benevolt" data-tech="uml sql scrum">
+            <button class="tile-btn" type="button" data-open-project="benevolt" aria-label="Open the Benevolt case study">
+              <span class="tile-media"><img src="img/projects/benevolt.png" alt="" width="800" height="450" data-fallback="Benevolt"></span>
+              <span class="tile-body">
+                <span class="tile-meta">2026 · University · Team · <span class="status status-wip">In progress</span></span>
+                <span class="tile-title">Benevolt, volunteering platform</span>
+                <span class="tile-text">SAÉ 3.01 case study. Modelling a platform that matches volunteers with associations, from use cases to a PostgreSQL schema with a realistic dataset.</span>
+                <span class="tags"><span>UML</span><span>MERISE</span><span>PowerAMC</span><span>PostgreSQL</span><span>Scrum</span><span>Azure DevOps</span></span>
+                <span class="tile-more">Read the case study <span aria-hidden="true">→</span></span>
+              </span>
+            </button>
+          </li>
+
+          <li class="tile" id="project-yaasystem" data-tech="linux php sql">
+            <button class="tile-btn" type="button" data-open-project="yaasystem" aria-label="Open the YAASystem project">
+              <span class="tile-media"><img src="img/projects/yaasystem.png" alt="" width="800" height="450" data-fallback="YAASystem"></span>
+              <span class="tile-body">
+                <span class="tile-meta">2026 · University · Team of 2</span>
+                <span class="tile-title">YAASystem, WordPress on a Raspberry Pi</span>
+                <span class="tile-text">A secured LEMP server running on 1 GB of RAM, tested under load.</span>
+                <span class="tags"><span>Linux</span><span>Nginx</span><span>MariaDB</span><span>PHP-FPM</span><span>WordPress</span></span>
+                <span class="tile-more">Details <span aria-hidden="true">→</span></span>
+              </span>
+            </button>
+          </li>
+
+          <li class="tile" id="project-motorbike" data-tech="csharp git">
+            <button class="tile-btn" type="button" data-open-project="motorbike" aria-label="Open the MotorBike Highway project">
+              <span class="tile-media"><img src="img/projects/motorbike.png" alt="" width="800" height="450" data-fallback="MotorBike Highway"></span>
+              <span class="tile-body">
+                <span class="tile-meta">Dec 2025 · University · Team of 2 · <span class="status status-done">Finished</span></span>
+                <span class="tile-title">MotorBike Highway, 2D game</span>
+                <span class="tile-text">A highway-dodging game built from scratch, with a customisation menu and rising difficulty.</span>
+                <span class="tags"><span>C#</span><span>WPF</span><span>XAML</span><span>Visual Studio</span><span>Git</span></span>
+                <span class="tile-more">Details <span aria-hidden="true">→</span></span>
+              </span>
+            </button>
+          </li>
+
+          <li class="tile" id="project-portfolio" data-tech="web git">
+            <button class="tile-btn" type="button" data-open-project="portfolio" aria-label="Open the project about this website">
+              <span class="tile-media"><img src="img/projects/portfolio.png" alt="" width="800" height="450" data-fallback="This website"></span>
+              <span class="tile-body">
+                <span class="tile-meta">2026 · University &amp; personal · Individual</span>
+                <span class="tile-title">This portfolio</span>
+                <span class="tile-text">Hand-written HTML, CSS and JavaScript, with no framework. The terminal at the top is real.</span>
+                <span class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span></span>
+                <span class="tile-more">Details <span aria-hidden="true">→</span></span>
+              </span>
+            </button>
+          </li>
+
+          <li class="tile" id="project-basicfit" data-tech="uml scrum">
+            <button class="tile-btn" type="button" data-open-project="basicfit" aria-label="Open the class booking application project">
+              <span class="tile-media"><img src="img/projects/basicfit.png" alt="" width="800" height="450" data-fallback="Class booking app"></span>
+              <span class="tile-body">
+                <span class="tile-meta">2026 · University · Team of 3</span>
+                <span class="tile-title">Class booking app (Basic-Fit clone)</span>
+                <span class="tile-text">A 32-page requirements specification for a gym class booking application.</span>
+                <span class="tags"><span>UML</span><span>Scrum</span></span>
+                <span class="tile-more">Details <span aria-hidden="true">→</span></span>
+              </span>
+            </button>
+          </li>
+
+          <li class="tile" id="project-matski" data-tech="sql uml">
+            <button class="tile-btn" type="button" data-open-project="matski" aria-label="Open the Matski HR database project">
+              <span class="tile-media"><img src="img/projects/matski.png" alt="" width="800" height="450" data-fallback="Matski HR"></span>
+              <span class="tile-body">
+                <span class="tile-meta">2025 · University · Individual</span>
+                <span class="tile-title">Matski, HR database</span>
+                <span class="tile-text">Reverse-engineering a company database and extending it with GDPR in mind.</span>
+                <span class="tags"><span>PostgreSQL</span><span>SQL</span><span>MERISE</span></span>
+                <span class="tile-more">Details <span aria-hidden="true">→</span></span>
+              </span>
+            </button>
+          </li>
+
+          <li class="tile" id="project-website" data-tech="web git">
+            <button class="tile-btn" type="button" data-open-project="website" aria-label="Open the personal website and domain project">
+              <span class="tile-media"><img src="img/projects/personal-site.png" alt="" width="800" height="450" data-fallback="flash-dev.online"></span>
+              <span class="tile-body">
+                <span class="tile-meta">2026 · Personal · Individual · <span class="status status-wip">In progress</span></span>
+                <span class="tile-title">Personal site and custom domain</span>
+                <span class="tile-text">A GitHub Pages site connected to my own domain names.</span>
+                <span class="tags"><span>GitHub Pages</span><span>DNS</span><span>HTML</span><span>CSS</span></span>
+                <span class="tile-more">Details <span aria-hidden="true">→</span></span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== INTERESTS + REFERENCES ===================== -->
+    <section class="section" id="interests" aria-labelledby="interests-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="cmd" aria-hidden="true"><span class="cmd-path">~</span> $ cat interests.md</p>
+          <h2 id="interests-title">Interests</h2>
+        </header>
+
+        <ul class="interests">
+          <li class="reveal">
+            <h3>Car mechanics</h3>
+            <p class="i-meta">2025 – 2026</p>
+            <p>Restored a 1999 Honda Civic EJ9 with a friend for road use: rust removal, weight reduction, bucket seats, respray and body kit.</p>
+          </li>
+          <li class="reveal">
+            <h3>Motorcycling</h3>
+            <p class="i-meta">Rider</p>
+            <p>Owned a motorcycle and carried out its maintenance myself.</p>
+          </li>
+          <li class="reveal">
+            <h3>Computing</h3>
+            <p class="i-meta">Every day</p>
+            <p>Video games, learning how operating systems and games are built, stock trading.</p>
+          </li>
+          <li class="reveal">
+            <h3>Commitment</h3>
+            <p class="i-meta">2019, 1 year</p>
+            <p>Young Firefighters at the Rumilly fire station.</p>
+          </li>
+          <li class="reveal">
+            <h3>International</h3>
+            <p class="i-meta">2015 – 2018</p>
+            <p>Lived in Romania for 3 years.</p>
+          </li>
+        </ul>
+
+        <header class="section-head section-head-sub" id="references">
+          <p class="cmd" aria-hidden="true"><span class="cmd-path">~</span> $ cat references.txt</p>
+          <h2>References</h2>
+        </header>
+        <ul class="refs">
+          <li class="ref reveal">
+            <h3>Stéphanie VIBRAC</h3>
+            <p>English Lecturer, International Coordinator</p>
+            <p class="ref-org">IUT of Annecy (USMB) · Annecy, France</p>
+            <p><a href="mailto:stephanie.vibrac@univ-smb.fr">stephanie.vibrac@univ-smb.fr</a></p>
+          </li>
+          <li class="ref reveal">
+            <h3>Hervé PERRIN</h3>
+            <p>Store Manager</p>
+            <p class="ref-org">Hyper U · Rumilly, France</p>
+            <p><a href="tel:+33450644142">+33(0)4 50 64 41 42</a></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="cmd" aria-hidden="true"><span class="cmd-path">~</span> $ ./contact.sh</p>
+          <h2 id="contact-title">Contact me</h2>
+          <p class="section-intro">An internship offer, a question about a project, or anything else: write to me.</p>
+        </header>
+
+        <div class="contact-grid">
+          <form class="contact-form panel" id="contact-form" novalidate>
+            <div class="field">
+              <label for="c-name">Your name</label>
+              <input id="c-name" name="name" type="text" autocomplete="name" required aria-describedby="c-name-err">
+              <p class="field-error" id="c-name-err"></p>
+            </div>
+            <div class="field">
+              <label for="c-email">Your email</label>
+              <input id="c-email" name="email" type="email" autocomplete="email" required aria-describedby="c-email-err">
+              <p class="field-error" id="c-email-err"></p>
+            </div>
+            <div class="field">
+              <label for="c-subject">Subject</label>
+              <input id="c-subject" name="subject" type="text" required aria-describedby="c-subject-err">
+              <p class="field-error" id="c-subject-err"></p>
+            </div>
+            <div class="field">
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="message" rows="6" required aria-describedby="c-message-hint c-message-err"></textarea>
+              <p class="field-hint" id="c-message-hint">At least 20 characters.</p>
+              <p class="field-error" id="c-message-err"></p>
+            </div>
+            <button class="btn btn-primary" type="submit">Open in my email app</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-side">
+            <div class="panel">
+              <h3>Email</h3>
+              <p class="mono-line">Anthony.Merlin@etu.univ-smb.fr</p>
+              <button class="btn btn-ghost btn-small" type="button" id="copy-email" data-email="Anthony.Merlin@etu.univ-smb.fr">Copy address</button>
+            </div>
+            <div class="panel">
+              <h3>Elsewhere</h3>
+              <ul class="links">
+                <li><a href="https://github.com/flashlefilou" target="_blank" rel="noopener">github.com/flashlefilou</a></li>
+                <li><a href="https://www.linkedin.com/in/anthony-merlin-8452ab316/" target="_blank" rel="noopener">in/anthony-merlin-8452ab316</a></li>
+              </ul>
+            </div>
+            <div class="panel">
+              <h3>My CV</h3>
+              <p>One A4 page, in English.</p>
+              <button class="btn btn-primary btn-small" type="button" data-open-cv>View the PDF</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Anthony Merlin</p>
+      <p class="mono-line">Built by hand with HTML, CSS and JavaScript. No framework, no CMS.</p>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <!-- ===================== CV VIEWER (view first, then download) ===================== -->
+  <dialog class="modal modal-cv" id="cv-dialog" aria-labelledby="cv-title">
+    <div class="modal-head">
+      <h2 id="cv-title">CV · Anthony Merlin</h2>
+      <div class="modal-actions">
+        <a class="btn btn-primary btn-small" href="cv/CV_Anthony_MERLIN_International.pdf" download>
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download PDF
+        </a>
+        <a class="btn btn-ghost btn-small" href="cv/CV_Anthony_MERLIN_International.pdf" target="_blank" rel="noopener">Open in a new tab</a>
+        <button class="icon-btn" type="button" data-close aria-label="Close the CV viewer">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="cv-frame-wrap">
+      <iframe id="cv-frame" title="CV of Anthony Merlin (PDF)" data-src="cv/CV_Anthony_MERLIN_International.pdf"></iframe>
+      <p class="cv-fallback">Your browser cannot show the PDF here. <a href="cv/CV_Anthony_MERLIN_International.pdf" target="_blank" rel="noopener">Open it in a new tab</a> or download it.</p>
+    </div>
+  </dialog>
+
+  <!-- ===================== PROJECT DIALOG ===================== -->
+  <dialog class="modal modal-project" id="project-dialog" aria-labelledby="project-dialog-title">
+    <div class="modal-head">
+      <p class="cmd" id="project-dialog-cmd" aria-hidden="true"></p>
+      <button class="icon-btn" type="button" data-close aria-label="Close the project">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="project-dialog-body"></div>
+  </dialog>
+
+  <!-- ===================== PROJECT CONTENT (templates) ===================== -->
+  <template id="tpl-benevolt">
+    <h2 id="project-dialog-title">Benevolt, volunteering platform</h2>
+    <p class="case-kicker">Case study · SAÉ 3.01 “Application design and development”</p>
+    <dl class="case-facts">
+      <div><dt>Date</dt><dd>2026 – 2027</dd></div>
+      <div><dt>Type of work</dt><dd>University project, team</dd></div>
+      <div><dt>Status</dt><dd><span class="status status-wip">In progress</span><br>Design file submitted, database due 13 Nov</dd></div>
+      <div><dt>Client</dt><dd>Fictional brief based on benevolt.fr</dd></div>
+    </dl>
+    <figure class="case-figure">
+      <div class="media"><img src="img/projects/benevolt.png" alt="Business class diagram of the Benevolt application" data-fallback="Benevolt"></div>
+      <figcaption>Business class diagram (UML).</figcaption>
+    </figure>
+
+    <h3>Context</h3>
+    <p>Benevolt is a French platform that connects people who want to volunteer with associations that need help. It claims more than 366,000 volunteers and 8,700 associations. Our brief was to design and build a new version, aimed in particular at young people looking for their first volunteering mission.</p>
+    <p>The application has three kinds of users: volunteers, associations and the Benevolt team. Visitors can browse missions without an account, but they must sign in to apply, save a favourite or leave a recommendation.</p>
+
+    <h3>What we delivered so far</h3>
+    <h4>1. Design file (submitted 16 Oct 2026)</h4>
+    <ul>
+      <li>Use case diagram with a textual description of each use case, and sequence diagrams where the flow needed detail.</li>
+      <li>Business class diagram for the whole application, with state-transition diagrams for the life cycle of an application (sent, in discussion, participation confirmed, mission completed, archived).</li>
+      <li>MVC design class diagrams for three features: searching for a mission, viewing a mission and subscribing to a paid plan.</li>
+    </ul>
+    <h4>2. Database (due 13 Nov 2026)</h4>
+    <ul>
+      <li>Conceptual and logical data models (MCD and MLD) in PowerAMC, then the full PostgreSQL creation script.</li>
+      <li>A dataset with at least 50 missions from 15 associations, 50 volunteers spread across several French departments, 30 applications and time slot registrations, plus subscription payments and invoices.</li>
+    </ul>
+
+    <h3>Modelling problems worth solving</h3>
+    <ul>
+      <li><strong>One mission, many activity types.</strong> A mission can be both “Collection” and “Communication”, so the link between missions and activity types is many-to-many, and searches and statistics have to count it correctly.</li>
+      <li><strong>An offer is a place and a time.</strong> One advert can run in several towns and over several time slots. Each (location, time slot) pair is a separate offer that volunteers apply to, with its own number of places.</li>
+      <li><strong>Personal data.</strong> Contact details are never shown publicly and only travel through the built-in messaging. Subscriptions also need their payments, invoices and payment references (card or SEPA mandate) to be kept.</li>
+    </ul>
+
+    <h3>How we work</h3>
+    <p>Scrum over five sprints, tracked in Azure DevOps: technical stories first (create the MCD, create the MLD, build the database), then user stories. One sprint review is held in English for the client.</p>
+
+    <h3>Technologies</h3>
+    <ul class="tags tags-lg"><li>UML</li><li>MERISE</li><li>PowerAMC</li><li>PostgreSQL</li><li>SQL</li><li>Scrum</li><li>Azure DevOps</li></ul>
+
+    <h3>Next steps</h3>
+    <p>Development with Laravel, deployment on the department's server, then security and GDPR work (cookie banner, privacy policy, password hashing).</p>
+  </template>
+
+  <template id="tpl-yaasystem">
+    <h2 id="project-dialog-title">YAASystem, WordPress hosting on a Raspberry Pi</h2>
+    <p class="case-kicker">SAÉ · Fictional company</p>
+    <dl class="case-facts">
+      <div><dt>Date</dt><dd>2026</dd></div>
+      <div><dt>Type of work</dt><dd>University project, two-person team</dd></div>
+      <div><dt>Status</dt><dd><span class="status status-done">Finished</span></dd></div>
+      <div><dt>Where</dt><dd>IUT of Annecy, Annecy, France</dd></div>
+    </dl>
+    <figure class="case-figure">
+      <div class="media"><img src="img/projects/yaasystem.png" alt="Screenshot of the YAASystem server setup" data-fallback="YAASystem"></div>
+      <figcaption>Server setup on the Raspberry Pi.</figcaption>
+    </figure>
+    <h3>Context</h3>
+    <p>YAASystem is a fictional company that needed its WordPress site hosted on cheap, limited hardware: a Raspberry Pi with 1 GB of RAM.</p>
+    <h3>What we did</h3>
+    <ul>
+      <li>Deployed a LEMP stack (Linux, Nginx, MariaDB, PHP-FPM) and installed WordPress on it.</li>
+      <li>Made the whole stack run within 1 GB of RAM.</li>
+      <li>Secured the server with a UFW firewall and rate limiting.</li>
+      <li>Ran load tests: zero failed requests.</li>
+    </ul>
+    <h3>Technologies</h3>
+    <ul class="tags tags-lg"><li>Linux</li><li>Nginx</li><li>MariaDB</li><li>PHP-FPM</li><li>WordPress</li><li>UFW</li></ul>
+  </template>
+
+  <template id="tpl-motorbike">
+    <h2 id="project-dialog-title">MotorBike Highway, 2D video game</h2>
+    <p class="case-kicker">SAÉ 1.01 &amp; 1.02 · First-year project</p>
+    <dl class="case-facts">
+      <div><dt>Date</dt><dd>Dec 2025</dd></div>
+      <div><dt>Type of work</dt><dd>University project, two-person team</dd></div>
+      <div><dt>Status</dt><dd><span class="status status-done">Finished</span></dd></div>
+      <div><dt>Where</dt><dd>IUT of Annecy, Annecy, France</dd></div>
+    </dl>
+    <figure class="case-figure">
+      <div class="media"><img src="img/projects/motorbike.png" alt="Screenshot of the MotorBike Highway game" data-fallback="MotorBike Highway"></div>
+      <figcaption>In-game screenshot.</figcaption>
+    </figure>
+    <h3>Context</h3>
+    <p>Our first big programming project: design and build a complete game in C# and WPF, then prove it works with a test plan.</p>
+    <h3>What we did</h3>
+    <ul>
+      <li>Designed and developed a 2D highway-dodging game from scratch.</li>
+      <li>Built a customisation menu, increasing difficulty, collision detection and animations.</li>
+      <li>Wrote a test plan and ran the validation tests.</li>
+      <li>Versioned the code with Git and published it on GitHub.</li>
+    </ul>
+    <h3>Technologies</h3>
+    <ul class="tags tags-lg"><li>C#</li><li>WPF</li><li>XAML</li><li>Visual Studio</li><li>Git</li></ul>
+    <h3>Links</h3>
+    <p><a class="ext" href="https://github.com/flashlefilou/TD2_10_MotorBikeHighway" target="_blank" rel="noopener">github.com/flashlefilou/TD2_10_MotorBikeHighway</a></p>
+  </template>
+
+  <template id="tpl-portfolio">
+    <h2 id="project-dialog-title">This portfolio</h2>
+    <p class="case-kicker">R3.12 Professional English · Personal project</p>
+    <dl class="case-facts">
+      <div><dt>Date</dt><dd>Nov 2026</dd></div>
+      <div><dt>Type of work</dt><dd>University and personal, individual</dd></div>
+      <div><dt>Status</dt><dd><span class="status status-done">Online</span></dd></div>
+      <div><dt>Hosted on</dt><dd>IUT server and flash-dev.online</dd></div>
+    </dl>
+    <figure class="case-figure">
+      <div class="media"><img src="img/projects/portfolio.png" alt="Screenshot of this portfolio" data-fallback="This website"></div>
+      <figcaption>The home section, dark theme.</figcaption>
+    </figure>
+    <h3>Context</h3>
+    <p>The brief: an online CV and portfolio, written in English, using HTML, CSS and JavaScript only. No CMS and no back-end framework.</p>
+    <h3>Key features</h3>
+    <ul>
+      <li>An interactive terminal with command history (arrow keys) and Tab completion.</li>
+      <li>Technology filters and project pop-ups built on the native <code>&lt;dialog&gt;</code> element.</li>
+      <li>A light and a dark theme, saved between visits and based on your system setting by default.</li>
+      <li>A CV viewer that shows the PDF before you download it.</li>
+      <li>A contact form validated in JavaScript that opens your email app, since there is no server code.</li>
+      <li>Bilingual English / French, switched with the button at the top.</li>
+      <li>Keyboard navigation, visible focus, and reduced motion when your system asks for it.</li>
+    </ul>
+    <h3>Technologies</h3>
+    <ul class="tags tags-lg"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li><li>GitHub Pages</li></ul>
+    <h3>Links</h3>
+    <p><a class="ext" href="https://flash-dev.online" target="_blank" rel="noopener">flash-dev.online</a></p>
+  </template>
+
+  <template id="tpl-basicfit">
+    <h2 id="project-dialog-title">Class booking application (Basic-Fit clone)</h2>
+    <p class="case-kicker">SAÉ · Fictional project</p>
+    <dl class="case-facts">
+      <div><dt>Date</dt><dd>2026</dd></div>
+      <div><dt>Type of work</dt><dd>University project, three-person team</dd></div>
+      <div><dt>Status</dt><dd><span class="status status-done">Specification delivered</span></dd></div>
+      <div><dt>Where</dt><dd>IUT of Annecy, Annecy, France</dd></div>
+    </dl>
+    <figure class="case-figure">
+      <div class="media"><img src="img/projects/basicfit.png" alt="Screen mock-up of the class booking application" data-fallback="Class booking app"></div>
+      <figcaption>Screen mock-up from the specification.</figcaption>
+    </figure>
+    <h3>Context</h3>
+    <p>A gym chain needs an application where members can book fitness classes. We had to describe it precisely enough for a development team to build it.</p>
+    <h3>What we did</h3>
+    <ul>
+      <li>Wrote a 32-page software requirements specification.</li>
+      <li>Drew the use case, activity and sequence diagrams.</li>
+      <li>Planned the project schedule and designed the screen mock-ups.</li>
+      <li>Organised the work in Scrum sprints.</li>
+    </ul>
+    <h3>Technologies</h3>
+    <ul class="tags tags-lg"><li>UML</li><li>Scrum</li></ul>
+  </template>
+
+  <template id="tpl-matski">
+    <h2 id="project-dialog-title">Matski, HR database</h2>
+    <p class="case-kicker">SAÉ · Fictional company</p>
+    <dl class="case-facts">
+      <div><dt>Date</dt><dd>2025</dd></div>
+      <div><dt>Type of work</dt><dd>University project, individual</dd></div>
+      <div><dt>Status</dt><dd><span class="status status-done">Finished</span></dd></div>
+      <div><dt>Where</dt><dd>IUT of Annecy, Annecy, France</dd></div>
+    </dl>
+    <figure class="case-figure">
+      <div class="media"><img src="img/projects/matski.png" alt="Data model of the Matski HR database" data-fallback="Matski HR"></div>
+      <figcaption>Data model of the extended database.</figcaption>
+    </figure>
+    <h3>Context</h3>
+    <p>Matski, a fictional company, already had an HR database. I had to rebuild its data model, query it and extend it.</p>
+    <h3>What I did</h3>
+    <ul>
+      <li>Reverse-engineered the existing database to rebuild its data model.</li>
+      <li>Wrote the business queries the HR department needed.</li>
+      <li>Designed an extension to the schema and analysed it against the GDPR.</li>
+    </ul>
+    <h3>Technologies</h3>
+    <ul class="tags tags-lg"><li>PostgreSQL</li><li>SQL</li><li>MERISE</li></ul>
+  </template>
+
+  <template id="tpl-website">
+    <h2 id="project-dialog-title">Personal site and custom domain</h2>
+    <p class="case-kicker">Personal project</p>
+    <dl class="case-facts">
+      <div><dt>Date</dt><dd>2026</dd></div>
+      <div><dt>Type of work</dt><dd>Personal, individual</dd></div>
+      <div><dt>Status</dt><dd><span class="status status-wip">In progress</span></dd></div>
+      <div><dt>Hosted on</dt><dd>GitHub Pages</dd></div>
+    </dl>
+    <figure class="case-figure">
+      <div class="media"><img src="img/projects/personal-site.png" alt="Screenshot of the personal website" data-fallback="flash-dev.online"></div>
+      <figcaption>The personal site.</figcaption>
+    </figure>
+    <h3>Context</h3>
+    <p>A personal website hosted on GitHub Pages and reachable at my own domain name instead of a github.io address.</p>
+    <h3>What I did</h3>
+    <ul>
+      <li>Published a static site with GitHub Pages from my account, flashlefilou.</li>
+      <li>Bought the domain names flash-dev.me and then flash-dev.online from Namecheap.</li>
+      <li>Set up the DNS records so the domain points to GitHub Pages.</li>
+      <li>Published this portfolio on it.</li>
+    </ul>
+    <h3>Technologies</h3>
+    <ul class="tags tags-lg"><li>GitHub Pages</li><li>DNS</li><li>HTML</li><li>CSS</li></ul>
+    <h3>Links</h3>
+    <p><a class="ext" href="https://flashlefilou.github.io" target="_blank" rel="noopener">flashlefilou.github.io</a></p>
+  </template>
+
+  <script src="js/i18n-fr.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
