@@ -539,7 +539,7 @@
             </div>
             <div class="panel">
               <h3>My CV</h3>
-              <p>One A4 page, in English.</p>
+              <p>One A4 page, in French or in English.</p>
               <button class="btn btn-primary btn-small" type="button" data-open-cv>View the PDF</button>
             </div>
           </div>
@@ -561,19 +561,40 @@
     <div class="modal-head">
       <h2 id="cv-title">CV · Anthony Merlin</h2>
       <div class="modal-actions">
-        <a class="btn btn-primary btn-small" href="cv/CV_Anthony_MERLIN_International.pdf" download>
-          <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Download PDF
-        </a>
-        <a class="btn btn-ghost btn-small" href="cv/CV_Anthony_MERLIN_International.pdf" target="_blank" rel="noopener">Open in a new tab</a>
+        <!-- Shown only once a version has been chosen -->
+        <div class="cv-actions" id="cv-actions" hidden>
+          <a class="btn btn-primary btn-small" id="cv-download" href="#" download>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download PDF
+          </a>
+          <a class="btn btn-ghost btn-small" id="cv-newtab" href="#" target="_blank" rel="noopener">Open in a new tab</a>
+        </div>
         <button class="icon-btn" type="button" data-close aria-label="Close the CV viewer">
           <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
       </div>
     </div>
-    <div class="cv-frame-wrap">
-      <iframe id="cv-frame" title="CV of Anthony Merlin (PDF)" data-src="cv/CV_Anthony_MERLIN_International.pdf"></iframe>
-      <p class="cv-fallback">Your browser cannot show the PDF here. <a href="cv/CV_Anthony_MERLIN_International.pdf" target="_blank" rel="noopener">Open it in a new tab</a> or download it.</p>
+
+    <!-- Step 1: choose a version -->
+    <div class="cv-choose" id="cv-choose">
+      <p class="cmd" aria-hidden="true"><span class="cmd-path">~</span> $ ls cv/</p>
+      <p class="cv-choose-title" id="cv-choose-title">Which version would you like to see?</p>
+      <div class="cv-choices" role="group" aria-labelledby="cv-choose-title">
+        <button class="cv-choice" type="button" data-cv="fr" lang="fr" autofocus>
+          <span class="cv-badge" aria-hidden="true">FR</span>
+          <span class="cv-choice-text"><strong>French version</strong><small>French CV, one A4 page</small></span>
+        </button>
+        <button class="cv-choice" type="button" data-cv="en">
+          <span class="cv-badge" aria-hidden="true">EN</span>
+          <span class="cv-choice-text"><strong>English version</strong><small>International CV, one A4 page</small></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 2: the chosen CV -->
+    <div class="cv-frame-wrap" id="cv-frame-wrap" hidden>
+      <iframe id="cv-frame" title="CV of Anthony Merlin (PDF)"></iframe>
+      <p class="cv-fallback">Your browser cannot show the PDF here. <a id="cv-fallback-link" href="#" target="_blank" rel="noopener">Open it in a new tab</a> or download it.</p>
     </div>
   </dialog>
 
@@ -711,7 +732,7 @@
       <li>An interactive terminal with command history (arrow keys) and Tab completion.</li>
       <li>Technology filters and project pop-ups built on the native <code>&lt;dialog&gt;</code> element.</li>
       <li>A light and a dark theme, saved between visits and based on your system setting by default.</li>
-      <li>A CV viewer that shows the PDF before you download it.</li>
+      <li>A CV viewer: pick the French or English version, see it, then download it.</li>
       <li>A contact form validated in JavaScript that opens your email app, since there is no server code.</li>
       <li>Bilingual English / French, switched with the button at the top.</li>
       <li>Keyboard navigation, visible focus, and reduced motion when your system asks for it.</li>

@@ -10,7 +10,8 @@ portfolio/
 ├── css/style.css           thèmes clair/sombre, mise en page, responsive
 ├── js/main.js              terminal, filtres, pop-ups, scroll-spy, formulaire, bascule FR/EN
 ├── js/i18n-fr.js           traductions françaises (clé = texte anglais exact)
-├── cv/CV_Anthony_MERLIN_International.pdf
+├── cv/CV_Anthony_MERLIN_International.pdf   CV anglais
+├── cv/CV_Anthony_MERLIN_FR.pdf              CV français
 └── img/
     ├── me.jpg              ta photo (carrée, ~640×640)
     └── projects/           captures 16:9 (~1600×900), noms ci-dessous

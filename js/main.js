@@ -274,6 +274,14 @@
   var projectCmd = $('#project-dialog-cmd');
   var cvDialog = $('#cv-dialog');
   var cvFrame = $('#cv-frame');
+  var cvChoose = $('#cv-choose');
+  var cvFrameWrap = $('#cv-frame-wrap');
+  var cvActions = $('#cv-actions');
+  var CV_FILES = {
+    fr: { path: 'cv/CV_Anthony_MERLIN_FR.pdf', title: 'CV of Anthony Merlin (PDF, French version)' },
+    en: { path: 'cv/CV_Anthony_MERLIN_International.pdf', title: 'CV of Anthony Merlin (PDF, English version)' }
+  };
+  var cvShown = null;
   var lastFocus = null;
   var supportsDialog = typeof HTMLDialogElement === 'function' && 'showModal' in document.createElement('dialog');
 
@@ -318,10 +326,49 @@
     return true;
   }
 
-  function openCV() {
+  // Step 1: the dialog opens on the version picker. The download / new-tab
+  // buttons stay hidden until a version is chosen.
+  function resetCV() {
+    cvShown = null;
+    if (cvFrame) cvFrame.removeAttribute('src');
+    if (cvFrameWrap) cvFrameWrap.hidden = true;
+    if (cvActions) cvActions.hidden = true;
+    if (cvChoose) cvChoose.hidden = false;
+  }
+
+  // Step 2: same dialog, same size; the picker is replaced by the chosen PDF.
+  function showCV(which) {
+    var cv = CV_FILES[which];
+    if (!cv) return;
+    cvShown = which;
+    cvFrame.setAttribute('src', cv.path);
+    cvFrame.setAttribute('title', t(cv.title));
+    $('#cv-download').setAttribute('href', cv.path);
+    $('#cv-download').setAttribute('download', cv.path.split('/').pop());
+    $('#cv-newtab').setAttribute('href', cv.path);
+    $('#cv-fallback-link').setAttribute('href', cv.path);
+    cvChoose.hidden = true;
+    cvFrameWrap.hidden = false;
+    cvActions.hidden = false;
+    // The clicked button has disappeared: put the focus on the next useful action.
+    $('#cv-download').focus();
+  }
+
+  function openCV(which) {
     if (!cvDialog) return;
-    if (cvFrame && !cvFrame.getAttribute('src')) cvFrame.setAttribute('src', cvFrame.getAttribute('data-src'));
-    openDialog(cvDialog);
+    resetCV();
+    if (!cvDialog.open) openDialog(cvDialog);
+    if (which) showCV(which);
+    else { var first = $('.cv-choice', cvDialog); if (first) first.focus(); }
+  }
+
+  if (cvDialog) {
+    cvFrame.setAttribute('data-i18n-noattr', '');
+    $$('.cv-choice', cvDialog).forEach(function (b) {
+      b.addEventListener('click', function () { showCV(b.getAttribute('data-cv')); });
+    });
+    cvDialog.addEventListener('close', resetCV);
+    onLangChange(function () { if (cvShown) cvFrame.setAttribute('title', t(CV_FILES[cvShown].title)); });
   }
 
   document.addEventListener('click', function (e) {
@@ -436,7 +483,14 @@
     skills: { desc: 'jump to Skills', run: function () { print('→ skills.md', 't-ok'); goTo('skills'); } },
     experience: { desc: 'jump to Experience and Education', run: function () { print('→ experience.log', 't-ok'); goTo('experience'); } },
     projects: { desc: 'jump to the Portfolio', run: function () { print('→ projects/', 't-ok'); goTo('portfolio'); } },
-    cv: { desc: 'view my CV (PDF), then download it', run: function () { print(t('Opening cv.pdf…'), 't-ok'); openCV(); } },
+    cv: {
+      desc: 'view my CV (PDF): "cv", "cv fr", "cv en"',
+      run: function (args) {
+        var v = args && (args[0] === 'fr' || args[0] === 'en') ? args[0] : null;
+        print(t(v === 'fr' ? 'Opening the French CV…' : v === 'en' ? 'Opening the English CV…' : 'Choose a version: French or English.'), 't-ok');
+        openCV(v);
+      }
+    },
     contact: {
       desc: 'write to me',
       run: function () {

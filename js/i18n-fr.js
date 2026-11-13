@@ -334,5 +334,18 @@ window.I18N_FR = {
  "Langue : français.": "Langue : français.",
  "→ contact form": "→ formulaire de contact",
  "Benevolt, volunteering platform (SAÉ 3.01, case study)": "Benevolt, plateforme de bénévolat (SAÉ 3.01, étude de cas)",
- "MotorBike Highway, 2D game in C#": "MotorBike Highway, jeu 2D en C#"
+ "MotorBike Highway, 2D game in C#": "MotorBike Highway, jeu 2D en C#",
+ "Which version would you like to see?": "Quelle version voulez-vous voir ?",
+ "French version": "Version française",
+ "English version": "Version anglaise",
+ "French CV, one A4 page": "CV en français, une page A4",
+ "International CV, one A4 page": "CV international, une page A4",
+ "One A4 page, in French or in English.": "Une page A4, en français ou en anglais.",
+ "A CV viewer: pick the French or English version, see it, then download it.": "Une visionneuse de CV : on choisit la version française ou anglaise, on la consulte, puis on la télécharge.",
+ "CV of Anthony Merlin (PDF, French version)": "CV d'Anthony Merlin (PDF, version française)",
+ "CV of Anthony Merlin (PDF, English version)": "CV d'Anthony Merlin (PDF, version anglaise)",
+ "view my CV (PDF): \"cv\", \"cv fr\", \"cv en\"": "voir mon CV (PDF) : « cv », « cv fr », « cv en »",
+ "Opening the French CV…": "Ouverture du CV en français…",
+ "Opening the English CV…": "Ouverture du CV en anglais…",
+ "Choose a version: French or English.": "Choisissez une version : français ou anglais."
 };

@@ -795,3 +795,49 @@ kbd { border: 1px solid var(--line-strong); border-bottom-width: 2px; border-rad
   .header-actions { gap: 6px; }
 }
 @media print { .wip-banner, .lang-toggle { display: none !important; } }
+
+/* ---------- CV dialog: version picker ---------- */
+.cv-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.cv-actions[hidden], .cv-choose[hidden], .cv-frame-wrap[hidden] { display: none !important; }
+.cv-choose {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-7) var(--space-5);
+  text-align: center;
+  background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.cv-choose-title { font-size: clamp(1.3rem, 2.6vw, 1.7rem); font-weight: 700; letter-spacing: -.01em; }
+.cv-choices { margin-top: var(--space-3); display: grid; grid-template-columns: repeat(2, minmax(0, 260px)); gap: var(--space-4); }
+.cv-choice {
+  display: flex; align-items: center; gap: var(--space-4);
+  min-height: 88px;
+  padding: var(--space-4) var(--space-5);
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-m);
+  color: var(--text); font: inherit;
+  cursor: pointer;
+  transition: border-color var(--dur-fast) ease, transform var(--dur-fast) ease, box-shadow var(--dur) ease;
+}
+.cv-choice:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); }
+.cv-choice:active { transform: translateY(0); }
+.cv-badge {
+  flex-shrink: 0;
+  display: grid; place-items: center;
+  width: 48px; height: 48px;
+  border-radius: var(--radius-s);
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  color: var(--accent);
+  font: 600 1rem var(--font-mono);
+}
+.cv-choice-text { display: grid; gap: 2px; }
+.cv-choice-text strong { font-size: 1.05rem; }
+.cv-choice-text small { font-size: .85rem; color: var(--text-muted); }
+@media (max-width: 640px) {
+  .cv-choices { grid-template-columns: 1fr; width: 100%; max-width: 340px; }
+}
+@media (prefers-reduced-motion: reduce) { .cv-choice:hover { transform: none; } }
