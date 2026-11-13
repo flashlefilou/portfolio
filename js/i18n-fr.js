@@ -369,5 +369,9 @@ window.I18N_FR = {
  "A query on the time-clock extension.": "Une requête sur l'extension de pointage.",
  "From git push to GitHub Pages to my own domain": "Du git push à GitHub Pages jusqu'à mon propre domaine",
  "From git push to my own domain.": "Du git push à mon propre domaine.",
- "The home section, on desktop and mobile.": "La page d'accueil, sur ordinateur et sur mobile."
+ "The home section, on desktop and mobile.": "La page d'accueil, sur ordinateur et sur mobile.",
+ "An index of my projects and experiments, on GitHub Pages at my own domain.": "Un index de mes projets et expérimentations, sur GitHub Pages avec mon propre domaine.",
+ "The flash-dev.online home page listing my projects": "La page d'accueil de flash-dev.online qui liste mes projets",
+ "The flash-dev.online home page.": "La page d'accueil de flash-dev.online.",
+ "A personal website that indexes my projects and experiments. It is hosted on GitHub Pages and reachable at my own domain name instead of a github.io address.": "Un site perso qui recense mes projets et expérimentations. Il est hébergé sur GitHub Pages et accessible avec mon propre nom de domaine plutôt qu'une adresse github.io."
 };
