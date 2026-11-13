@@ -39,6 +39,10 @@ Tu peux aussi déposer du `.jpg` ou du `.webp`, mais il faut alors changer l'ext
 
 Valeurs possibles de `data-tech` (ce sont celles des filtres) : `uml sql csharp linux web php git scrum`.
 
+## Cache du navigateur
+
+Les fichiers CSS, JS et les visuels sont appelés avec `?v=...` dans `index.html` (ex. `css/style.css?v=20261113b`). Quand tu remplaces un de ces fichiers sans changer son nom, change aussi cette valeur partout (rechercher-remplacer) : sinon les visiteurs gardent l'ancienne version en cache.
+
 ## Traduction FR / EN
 
 Le site est écrit en anglais dans `index.html`. Le bouton FR/EN remplace chaque texte par sa traduction trouvée dans `js/i18n-fr.js`, où la clé est le texte anglais exact (espaces mis à part). Le choix est mémorisé dans le navigateur.
