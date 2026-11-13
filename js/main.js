@@ -278,8 +278,8 @@
   var cvFrameWrap = $('#cv-frame-wrap');
   var cvActions = $('#cv-actions');
   var CV_FILES = {
-    fr: { path: 'cv/CV_Anthony_MERLIN_FR.pdf', title: 'CV of Anthony Merlin (PDF, French version)' },
-    en: { path: 'cv/CV_Anthony_MERLIN_International.pdf', title: 'CV of Anthony Merlin (PDF, English version)' }
+    fr: { path: 'cv/CV_Anthony_MERLIN_FR.pdf?v=20261113c', title: 'CV of Anthony Merlin (PDF, French version)' },
+    en: { path: 'cv/CV_Anthony_MERLIN_International.pdf?v=20261113c', title: 'CV of Anthony Merlin (PDF, English version)' }
   };
   var cvShown = null;
   var lastFocus = null;
@@ -344,7 +344,7 @@
     cvFrame.setAttribute('src', cv.path);
     cvFrame.setAttribute('title', t(cv.title));
     $('#cv-download').setAttribute('href', cv.path);
-    $('#cv-download').setAttribute('download', cv.path.split('/').pop());
+    $('#cv-download').setAttribute('download', cv.path.split('/').pop().split('?')[0]);
     $('#cv-newtab').setAttribute('href', cv.path);
     $('#cv-fallback-link').setAttribute('href', cv.path);
     cvChoose.hidden = true;
