@@ -841,3 +841,8 @@ kbd { border: 1px solid var(--line-strong); border-bottom-width: 2px; border-rad
   .cv-choices { grid-template-columns: 1fr; width: 100%; max-width: 340px; }
 }
 @media (prefers-reduced-motion: reduce) { .cv-choice:hover { transform: none; } }
+
+/* ---------- Downloadable documents in project pop-ups ---------- */
+.dl { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+.dl svg { flex-shrink: 0; }
+.file-meta { margin-left: 8px; font-family: var(--font-mono); font-size: .8rem; color: var(--text-muted); }

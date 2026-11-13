@@ -12,6 +12,7 @@ portfolio/
 ├── js/i18n-fr.js           traductions françaises (clé = texte anglais exact)
 ├── cv/CV_Anthony_MERLIN_International.pdf   CV anglais
 ├── cv/CV_Anthony_MERLIN_FR.pdf              CV français
+├── docs/                                    comptes rendus téléchargeables (PDF)
 └── img/
     ├── me.jpg              ta photo (carrée, ~640×640)
     └── projects/           captures 16:9 (~1600×900), noms ci-dessous
@@ -24,13 +25,9 @@ Tant qu'une image manque, le site affiche à sa place une vignette propre (le no
 | Fichier | Quoi mettre |
 |---|---|
 | `img/me.jpg` | ta photo |
-| `img/projects/benevolt.png` | diagramme de classes métier ou MCD |
-| `img/projects/yaasystem.png` | terminal du Raspberry Pi, ou le WordPress en ligne |
-| `img/projects/motorbike.png` | capture du jeu en partie |
-| `img/projects/portfolio.png` | capture de ce site |
-| `img/projects/basicfit.png` | une maquette d'écran du cahier des charges |
-| `img/projects/matski.png` | le modèle de données |
-| `img/projects/personal-site.png` | ton site GitHub Pages |
+| `img/projects/benevolt.png` | capture Benevolt (en attente) |
+
+Les autres visuels de projets sont déjà en place en `.webp` (1600×900).
 
 Tu peux aussi déposer du `.jpg` ou du `.webp`, mais il faut alors changer l'extension dans `index.html` (chercher `img/projects/`).
 
