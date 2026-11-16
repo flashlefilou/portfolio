@@ -494,7 +494,7 @@
     contact: {
       desc: 'write to me',
       run: function () {
-        print('Email: <a href="mailto:Anthony.Merlin@etu.univ-smb.fr">Anthony.Merlin@etu.univ-smb.fr</a>');
+        print('Email: <a href="mailto:anthomerlin74@gmail.com">anthomerlin74@gmail.com</a>');
         print(t('→ contact form'), 't-ok');
         goTo('contact');
         setTimeout(function () { var n = $('#c-name'); if (n) n.focus({ preventScroll: true }); }, reduceMotion.matches ? 0 : 600);
@@ -599,7 +599,7 @@
      CONTACT FORM → mailto (no back-end allowed)
      ========================================================= */
   var cform = $('#contact-form');
-  var TO = 'Anthony.Merlin@etu.univ-smb.fr';
+  var TO = 'anthomerlin74@gmail.com';
 
   var rules = {
     'c-name': function (v) { return v.length < 2 ? t('Please enter your name.') : ''; },
