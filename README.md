@@ -1,76 +1,67 @@
-# Portfolio · Anthony Merlin
+# Anthony Merlin · Portfolio
 
-Site one-page en HTML, CSS et JavaScript pur (sans CMS, sans framework, sans back-end), pour R3.12.
+Portfolio et CV en ligne d'Anthony Merlin, étudiant en deuxième année de BUT Informatique à l'IUT d'Annecy.
 
-## Arborescence
+**Site en ligne : [portfolio.flash-dev.online](https://portfolio.flash-dev.online/)**
 
-```
-portfolio/
-├── index.html              contenu + fiches projets (balises <template>)
-├── css/style.css           thèmes clair/sombre, mise en page, responsive
-├── js/main.js              terminal, filtres, pop-ups, scroll-spy, formulaire, bascule FR/EN
-├── js/i18n-fr.js           traductions françaises (clé = texte anglais exact)
-├── cv/CV_Anthony_MERLIN_International.pdf   CV anglais
-├── cv/CV_Anthony_MERLIN_FR.pdf              CV français
-├── docs/                                    comptes rendus téléchargeables (PDF)
-└── img/
-    ├── me.jpg              ta photo (carrée, ~640×640)
-    └── projects/           captures 16:9 (~1600×900), noms ci-dessous
-```
+![Page d'accueil du portfolio sur ordinateur et sur mobile](img/projects/portfolio.webp)
 
-## Images à déposer
+## Le projet
 
-Tant qu'une image manque, le site affiche à sa place une vignette propre (le nom du projet sur une grille). Il suffit de déposer le fichier avec le bon nom, sans toucher au code.
+Site d'une seule page écrit à la main en HTML, CSS et JavaScript, sans framework, sans CMS et sans back-end. Il est né d'un devoir de la ressource R3.12 (anglais professionnel) et sert aujourd'hui de portfolio principal pour les candidatures de stage.
 
-| Fichier | Quoi mettre |
+La page présente le profil, les compétences, le parcours et la formation, puis un portfolio de projets universitaires et personnels. Chaque projet s'ouvre dans une fenêtre qui détaille le contexte, la part de travail personnelle, les technologies utilisées et les liens vers le code ou les comptes rendus.
+
+## Fonctionnalités
+
+- **Terminal interactif** en haut de page, avec des commandes (`help`, `ls projects`, `open benevolt`, `cv`, `contact`…), un historique et la complétion avec Tab
+- **Filtres par technologie** et fenêtres de projets construites sur l'élément natif `<dialog>`
+- **Visionneuse de CV** : choix de la version française ou anglaise, affichage du PDF, puis téléchargement
+- **Français / anglais** : français par défaut, choix mémorisé d'une visite à l'autre
+- **Thèmes clair et sombre**, calés sur le réglage du système tant qu'aucun thème n'a été choisi
+- **Formulaire de contact** vérifié en JavaScript et envoyé via la messagerie du visiteur (aucun code serveur)
+- **Accessibilité** : navigation au clavier, focus visible, libellés ARIA, animations réduites sur demande du système, contrastes vérifiés dans les deux thèmes
+- **Mise en page responsive**, du mobile au grand écran
+
+## Technologies
+
+- HTML5, CSS3 (variables CSS, grid, `color-mix`), JavaScript natif (ES5, aucune dépendance)
+- Polices IBM Plex Sans et IBM Plex Mono (Google Fonts)
+- Hébergement sur GitHub Pages avec un nom de domaine personnalisé
+
+## Fonctionnement
+
+| Sujet | Mise en œuvre |
 |---|---|
-| `img/me.jpg` | ta photo |
-| `img/projects/benevolt.png` | capture Benevolt (en attente) |
+| Traduction | Le texte source est écrit en anglais dans `index.html`. `js/i18n-fr.js` associe chaque texte anglais à sa version française ; `main.js` parcourt les nœuds de texte de la page pour les remplacer, et rétablit le texte d'origine au retour vers l'anglais. |
+| Fiches projets | Chaque fenêtre de projet est un `<template>` dans `index.html`, cloné dans un unique `<dialog>` à l'ouverture d'une tuile. Un lien comme `#project-benevolt` ouvre directement le projet. |
+| Images manquantes | Tant qu'une capture n'est pas disponible, la tuile affiche une vignette avec le nom du projet au lieu d'une image cassée. |
+| Cache | Les fichiers CSS, JavaScript, les images et les CV sont chargés avec un paramètre de version (`?v=…`), pour que les visiteurs réguliers reçoivent toujours la dernière version. |
 
-Les autres visuels de projets sont déjà en place en `.webp` (1600×900).
+## Structure
 
-Tu peux aussi déposer du `.jpg` ou du `.webp`, mais il faut alors changer l'extension dans `index.html` (chercher `img/projects/`).
-
-## Ajouter ou modifier un projet
-
-1. Dans `index.html`, copie un `<li class="tile">` dans `<ul id="tiles">`, puis change son `id` (`project-xxx`), `data-tech` et `data-open-project="xxx"`.
-2. Copie un `<template id="tpl-...">` et renomme-le `tpl-xxx`.
-3. Dans `js/main.js`, ajoute `xxx` dans `projectIds` et dans `projectNames` (pour le terminal).
-
-Valeurs possibles de `data-tech` (ce sont celles des filtres) : `uml sql csharp linux web php git scrum`.
-
-## Cache du navigateur
-
-Les fichiers CSS, JS et les visuels sont appelés avec `?v=...` dans `index.html` (ex. `css/style.css?v=20261113b`). Quand tu remplaces un de ces fichiers sans changer son nom, change aussi cette valeur partout (rechercher-remplacer) : sinon les visiteurs gardent l'ancienne version en cache.
-
-## Traduction FR / EN
-
-Le site s'ouvre en français par défaut (le texte source reste en anglais dans `index.html`). Le bouton FR/EN remplace chaque texte par sa traduction trouvée dans `js/i18n-fr.js`, où la clé est le texte anglais exact (espaces mis à part). Le choix est mémorisé dans le navigateur.
-
-Si tu modifies un texte anglais, modifie aussi sa clé dans `js/i18n-fr.js`, sinon il restera en anglais en mode FR. Un texte absent du fichier (nom de techno, adresse e-mail…) reste simplement tel quel.
-
-## Bandeau « en construction »
-
-C'est le bloc `<div class="wip-banner">` tout en haut de `index.html`. Supprime-le quand le portfolio sera terminé.
-
-## Déploiement sur le serveur de M. Damas (OVH)
-
-```bash
-# depuis le dossier parent de portfolio/
-scp -r portfolio/ <login>@51.83.36.122:~/public_html/
-# puis vérifier les droits de lecture
-ssh <login>@51.83.36.122 "chmod -R a+rX ~/public_html/portfolio"
+```
+├── index.html          contenu de la page et fiches projets (<template>)
+├── css/style.css       variables de design, thèmes clair/sombre, mise en page, responsive
+├── js/main.js          terminal, filtres, fenêtres, thème, langue, formulaire de contact
+├── js/i18n-fr.js       traductions françaises
+├── cv/                 CV en anglais et en français (PDF)
+├── docs/               comptes rendus de projets à télécharger (PDF)
+└── img/                photo de profil et visuels des projets (WebP)
 ```
 
-## Déploiement sur flash-dev.online (GitHub Pages)
-
-Tous les chemins sont relatifs, donc le même dossier fonctionne aux deux endroits.
-Pousse le contenu de `portfolio/` à la racine du dépôt `flashlefilou.github.io`, puis vérifie dans Settings → Pages que le domaine personnalisé est bien `flash-dev.online`.
-
-## Tester en local
+## Lancement en local
 
 ```bash
-cd portfolio && python3 -m http.server 8000
-# puis ouvrir http://localhost:8000
+git clone https://github.com/flashlefilou/portfolio.git
+cd portfolio
+python3 -m http.server 8000
 ```
-L'ouverture directe du fichier (double-clic) marche aussi, mais la visionneuse PDF est plus fiable avec un petit serveur.
+
+Le site est alors accessible sur http://localhost:8000.
+
+## Contact
+
+- E-mail : [anthomerlin74@gmail.com](mailto:anthomerlin74@gmail.com)
+- LinkedIn : [anthony-merlin-8452ab316](https://www.linkedin.com/in/anthony-merlin-8452ab316/)
+- GitHub : [flashlefilou](https://github.com/flashlefilou)
