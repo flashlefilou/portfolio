@@ -18,7 +18,6 @@ window.I18N_FR = {
  "or": "ou",
  "About me": "À propos",
  "I am in the second year of a Technical Bachelor's Degree in Computer Science (BUT Informatique, application development track) at the IUT of Annecy, University of Savoie Mont Blanc.": "Je suis en deuxième année de BUT Informatique, parcours A (réalisation d'applications), à l'IUT d'Annecy, Université Savoie Mont Blanc.",
- "I am adaptable and rigorous, and I have led a team under pressure in a fast-food restaurant while studying. I am looking for a 10- to 12-week internship in software development, starting in April 2027, anywhere in the Auvergne-Rhône-Alpes region. I want to apply what I have learnt in a real team and see what a developer's day-to-day work looks like.": "Je suis adaptable et rigoureux, et j'ai encadré une équipe sous pression dans un fast-food pendant mes études. Je cherche un stage de 10 à 12 semaines en développement logiciel, à partir d'avril 2027, partout en Auvergne-Rhône-Alpes. Je veux mettre en pratique ce que j'ai appris dans une vraie équipe et découvrir le quotidien d'un développeur.",
  "Outside computing, I restored a 1999 Honda Civic with a friend and I have always maintained my own motorcycle myself.": "En dehors de l'informatique, j'ai restauré une Honda Civic de 1999 avec un ami et j'ai toujours entretenu ma moto moi-même.",
  "Studying": "Formation",
  "BUT Informatique, 2nd year": "BUT Informatique, 2e année",
@@ -373,5 +372,11 @@ window.I18N_FR = {
  "An index of my projects and experiments, on GitHub Pages at my own domain.": "Un index de mes projets et expérimentations, sur GitHub Pages avec mon propre domaine.",
  "The flash-dev.online home page listing my projects": "La page d'accueil de flash-dev.online qui liste mes projets",
  "The flash-dev.online home page.": "La page d'accueil de flash-dev.online.",
- "A personal website that indexes my projects and experiments. It is hosted on GitHub Pages and reachable at my own domain name instead of a github.io address.": "Un site perso qui recense mes projets et expérimentations. Il est hébergé sur GitHub Pages et accessible avec mon propre nom de domaine plutôt qu'une adresse github.io."
+ "A personal website that indexes my projects and experiments. It is hosted on GitHub Pages and reachable at my own domain name instead of a github.io address.": "Un site perso qui recense mes projets et expérimentations. Il est hébergé sur GitHub Pages et accessible avec mon propre nom de domaine plutôt qu'une adresse github.io.",
+ "Internship search": "Recherche de stage",
+ "Open to an internship": "Recherche un stage",
+ "10 to 12 weeks from April 2027": "10 à 12 semaines dès avril 2027",
+ "Software, mobile or web": "Logiciel, mobile ou web",
+ "Montpellier or Annecy area": "Région de Montpellier ou d'Annecy",
+ "I am adaptable and rigorous, and I have led a team under pressure in a fast-food restaurant while studying. I am looking for a 10- to 12-week internship in software development, starting in April 2027, around Montpellier or Annecy. I want to apply what I have learnt in a real team and see what a developer's day-to-day work looks like.": "Je suis adaptable et rigoureux, et j'ai encadré une équipe sous pression dans un fast-food pendant mes études. Je cherche un stage de 10 à 12 semaines en développement logiciel, à partir d'avril 2027, vers Montpellier ou Annecy. Je veux mettre en pratique ce que j'ai appris dans une vraie équipe et découvrir le quotidien d'un développeur."
 };
