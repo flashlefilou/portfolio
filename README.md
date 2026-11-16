@@ -45,7 +45,7 @@ Les fichiers CSS, JS et les visuels sont appelés avec `?v=...` dans `index.html
 
 ## Traduction FR / EN
 
-Le site est écrit en anglais dans `index.html`. Le bouton FR/EN remplace chaque texte par sa traduction trouvée dans `js/i18n-fr.js`, où la clé est le texte anglais exact (espaces mis à part). Le choix est mémorisé dans le navigateur.
+Le site s'ouvre en français par défaut (le texte source reste en anglais dans `index.html`). Le bouton FR/EN remplace chaque texte par sa traduction trouvée dans `js/i18n-fr.js`, où la clé est le texte anglais exact (espaces mis à part). Le choix est mémorisé dans le navigateur.
 
 Si tu modifies un texte anglais, modifie aussi sa clé dans `js/i18n-fr.js`, sinon il restera en anglais en mode FR. Un texte absent du fichier (nom de techno, adresse e-mail…) reste simplement tel quel.
 

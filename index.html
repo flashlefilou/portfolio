@@ -20,7 +20,7 @@
       document.documentElement.classList.add('js');
       var l = null;
       try { l = localStorage.getItem('lang'); } catch (e) {}
-      if (l === 'fr') document.documentElement.setAttribute('lang', 'fr');
+      if (l !== 'en') document.documentElement.setAttribute('lang', 'fr');
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -842,6 +842,6 @@
   </template>
 
   <script src="js/i18n-fr.js?v=20261116a"></script>
-  <script src="js/main.js?v=20261116b"></script>
+  <script src="js/main.js?v=20261116c"></script>
 </body>
 </html>

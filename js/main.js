@@ -19,13 +19,13 @@
   };
 
   /* =========================================================
-     LANGUAGE (English by default, French on demand)
+     LANGUAGE (French by default, English on demand)
      Every visible text and aria-label/alt/title is looked up in
      window.I18N_FR by its English wording. The English original
      is kept in memory so switching back restores it exactly.
      ========================================================= */
   var FR = window.I18N_FR || {};
-  var lang = store.get('lang') === 'fr' ? 'fr' : 'en';
+  var lang = store.get('lang') === 'en' ? 'en' : 'fr'; // French by default, English if the visitor chose it
   var textOriginals = new WeakMap();
   var attrOriginals = new WeakMap();
   var I18N_ATTRS = ['aria-label', 'alt', 'title'];
