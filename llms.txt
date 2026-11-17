@@ -1,0 +1,29 @@
+# Anthony Merlin
+
+> Anthony Merlin est étudiant en 2e année de BUT Informatique (parcours réalisation d'applications) à l'IUT d'Annecy, Université Savoie Mont Blanc, en France. Il développe des applications de bureau en C# / .NET (WPF), conçoit des bases de données PostgreSQL et administre des serveurs Linux. Il recherche un stage de 10 à 12 semaines en développement logiciel à partir d'avril 2027, dans la région de Montpellier ou d'Annecy.
+
+## Profil
+
+- Formation : BUT Informatique, IUT d'Annecy (2025 – 2028) ; baccalauréat STI2D spécialité SIN, mention Bien (2025)
+- Compétences : C#, .NET, WPF, SQL, PostgreSQL, PL/pgSQL, UML, MERISE, HTML, CSS, JavaScript, PHP, Linux, Nginx, Git, Scrum
+- Langues : français (langue maternelle), anglais (B1), italien (A2)
+- Localisation : Vallières-sur-Fier, Haute-Savoie, France ; permis B
+- Expérience : employé au rayon fruits et légumes chez Hyper U Rumilly (depuis 2026) ; équipier puis chef d'équipe chez Burger King Rumilly (2025 – 2026)
+
+## Projets
+
+- [Benevolt](https://portfolio.flash-dev.online/#project-benevolt) : conception UML et base PostgreSQL d'une plateforme qui met en relation bénévoles et associations (projet universitaire en équipe, 2026, en cours)
+- [YAASystem](https://portfolio.flash-dev.online/#project-yaasystem) : hébergement WordPress sécurisé sur un Raspberry Pi de 1 Go de RAM, pile LEMP, tests de charge (binôme, 2026)
+- [MotorBike Highway](https://github.com/flashlefilou/TD2_10_MotorBikeHighway) : jeu vidéo 2D en C# et WPF (binôme, 2025)
+- [Application de réservation de cours](https://portfolio.flash-dev.online/#project-basicfit) : cahier des charges de 32 pages avec diagrammes UML et maquettes (équipe de 3, 2026)
+- [Matski](https://portfolio.flash-dev.online/#project-matski) : rétro-conception et extension d'une base de données RH sous PostgreSQL (individuel, 2025)
+- [Portfolio](https://github.com/flashlefilou/portfolio) : ce site, en HTML, CSS et JavaScript natifs
+
+## Liens
+
+- [Portfolio](https://portfolio.flash-dev.online/)
+- [GitHub](https://github.com/flashlefilou)
+- [LinkedIn](https://www.linkedin.com/in/anthony--merlin/)
+- [CV en français (PDF)](https://portfolio.flash-dev.online/cv/CV_Anthony_MERLIN_FR.pdf)
+- [CV en anglais (PDF)](https://portfolio.flash-dev.online/cv/CV_Anthony_MERLIN_International.pdf)
+- Contact : anthomerlin74@gmail.com

@@ -63,5 +63,5 @@ Le site est alors accessible sur http://localhost:8000.
 ## Contact
 
 - E-mail : [anthomerlin74@gmail.com](mailto:anthomerlin74@gmail.com)
-- LinkedIn : [anthony-merlin-8452ab316](https://www.linkedin.com/in/anthony-merlin-8452ab316/)
+- LinkedIn : [anthony--merlin](https://www.linkedin.com/in/anthony--merlin/)
 - GitHub : [flashlefilou](https://github.com/flashlefilou)

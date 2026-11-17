@@ -510,7 +510,7 @@
       }
     },
     github: { desc: 'open my GitHub', run: function () { print('→ github.com/flashlefilou', 't-ok'); window.open('https://github.com/flashlefilou', '_blank', 'noopener'); } },
-    linkedin: { desc: 'open my LinkedIn', run: function () { print('→ linkedin.com/in/anthony-merlin-8452ab316', 't-ok'); window.open('https://www.linkedin.com/in/anthony-merlin-8452ab316/', '_blank', 'noopener'); } },
+    linkedin: { desc: 'open my LinkedIn', run: function () { print('→ linkedin.com/in/anthony--merlin/', 't-ok'); window.open('https://www.linkedin.com/in/anthony--merlin/', '_blank', 'noopener'); } },
     theme: {
       desc: 'switch theme: "theme", "theme light", "theme dark"',
       run: function (args) {

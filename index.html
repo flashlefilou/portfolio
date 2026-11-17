@@ -10,6 +10,7 @@
 
   <!-- Link previews (LinkedIn, Discord, messaging apps) -->
   <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Anthony Merlin · Portfolio">
   <meta property="og:url" content="https://portfolio.flash-dev.online/">
   <meta property="og:title" content="Anthony Merlin – Développeur, étudiant en BUT Informatique">
   <meta property="og:description" content="Anthony Merlin, étudiant en 2e année de BUT Informatique à l'IUT d'Annecy, développe en C#, SQL et web. Recherche un stage de 10 à 12 semaines dès avril 2027, à Montpellier ou Annecy.">
@@ -26,32 +27,88 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Anthony Merlin",
-    "givenName": "Anthony",
-    "familyName": "Merlin",
-    "url": "https://portfolio.flash-dev.online/",
-    "image": "https://portfolio.flash-dev.online/img/me.jpg",
-    "email": "mailto:anthomerlin74@gmail.com",
-    "jobTitle": "Étudiant en BUT Informatique, développeur",
-    "description": "Étudiant en 2e année de BUT Informatique à l'IUT d'Annecy, à la recherche d'un stage en développement logiciel à partir d'avril 2027.",
-    "affiliation": {
-      "@type": "CollegeOrUniversity",
-      "name": "IUT d'Annecy, Université Savoie Mont Blanc",
-      "url": "https://www.iut-acy.univ-smb.fr/"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Vallières-sur-Fier",
-      "addressRegion": "Haute-Savoie",
-      "addressCountry": "FR"
-    },
-    "knowsLanguage": ["fr", "en", "it"],
-    "knowsAbout": ["C#", ".NET", "WPF", "SQL", "PostgreSQL", "UML", "HTML", "CSS", "JavaScript", "Linux", "Nginx", "Git"],
-    "sameAs": [
-      "https://www.linkedin.com/in/anthony-merlin-8452ab316/",
-      "https://github.com/flashlefilou",
-      "https://flash-dev.online/"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://portfolio.flash-dev.online/#person",
+        "name": "Anthony Merlin",
+        "givenName": "Anthony",
+        "familyName": "Merlin",
+        "url": "https://portfolio.flash-dev.online/",
+        "image": "https://portfolio.flash-dev.online/img/me.jpg",
+        "email": "mailto:anthomerlin74@gmail.com",
+        "jobTitle": "Étudiant en BUT Informatique, développeur",
+        "description": "Étudiant en 2e année de BUT Informatique à l'IUT d'Annecy, à la recherche d'un stage en développement logiciel à partir d'avril 2027.",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "IUT d'Annecy, Université Savoie Mont Blanc",
+          "url": "https://www.iut-acy.univ-smb.fr/"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Vallières-sur-Fier",
+          "addressRegion": "Haute-Savoie",
+          "addressCountry": "FR"
+        },
+        "knowsLanguage": [
+          "fr",
+          "en",
+          "it"
+        ],
+        "knowsAbout": [
+          "C#",
+          ".NET",
+          "WPF",
+          "SQL",
+          "PostgreSQL",
+          "UML",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Linux",
+          "Nginx",
+          "Git"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/anthony--merlin/",
+          "https://github.com/flashlefilou",
+          "https://flash-dev.online/"
+        ],
+        "alumniOf": {
+          "@type": "HighSchool",
+          "name": "Lycée de l'Albanais",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Rumilly",
+            "addressCountry": "FR"
+          }
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://portfolio.flash-dev.online/#website",
+        "url": "https://portfolio.flash-dev.online/",
+        "name": "Anthony Merlin · Portfolio",
+        "inLanguage": [
+          "fr",
+          "en"
+        ],
+        "about": {
+          "@id": "https://portfolio.flash-dev.online/#person"
+        }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://portfolio.flash-dev.online/#profilepage",
+        "url": "https://portfolio.flash-dev.online/",
+        "inLanguage": "fr",
+        "isPartOf": {
+          "@id": "https://portfolio.flash-dev.online/#website"
+        },
+        "mainEntity": {
+          "@id": "https://portfolio.flash-dev.online/#person"
+        }
+      }
     ]
   }
   </script>
@@ -139,7 +196,7 @@
             <li>Vallières-sur-Fier, France</li>
             <li>Available from April 2027</li>
             <li><a href="https://github.com/flashlefilou" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/anthony-merlin-8452ab316/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/anthony--merlin/" target="_blank" rel="noopener">LinkedIn</a></li>
           </ul>
         </div>
 
@@ -584,7 +641,7 @@
               <h3>Elsewhere</h3>
               <ul class="links">
                 <li><a href="https://github.com/flashlefilou" target="_blank" rel="noopener">github.com/flashlefilou</a></li>
-                <li><a href="https://www.linkedin.com/in/anthony-merlin-8452ab316/" target="_blank" rel="noopener">in/anthony-merlin-8452ab316</a></li>
+                <li><a href="https://www.linkedin.com/in/anthony--merlin/" target="_blank" rel="noopener">in/anthony--merlin</a></li>
               </ul>
             </div>
             <div class="panel">
@@ -892,6 +949,6 @@
   </template>
 
   <script src="js/i18n-fr.js?v=20261117a"></script>
-  <script src="js/main.js?v=20261117a"></script>
+  <script src="js/main.js?v=20261117b"></script>
 </body>
 </html>
