@@ -29,7 +29,14 @@
   var textOriginals = new WeakMap();
   var attrOriginals = new WeakMap();
   var I18N_ATTRS = ['aria-label', 'alt', 'title'];
-  var titleOriginal = document.title;
+  // The page <head> is written in French (search engines read it first); English versions here.
+  var HEAD_TEXT = {
+    fr: { title: document.title, desc: (document.querySelector('meta[name="description"]') || {}).content },
+    en: {
+      title: 'Anthony Merlin – Developer, computer science student',
+      desc: 'Anthony Merlin, second-year computer science student at the IUT of Annecy (France), builds with C#, SQL and the web. Looking for a 10- to 12-week internship from April 2027, around Montpellier or Annecy.'
+    }
+  };
 
   function norm(str) { return str.replace(/\s+/g, ' ').trim(); }
 
@@ -82,7 +89,9 @@
     lang = next === 'fr' ? 'fr' : 'en';
     if (save) store.set('lang', lang);
     root.setAttribute('lang', lang);
-    document.title = lang === 'fr' && FR[titleOriginal] ? FR[titleOriginal] : titleOriginal;
+    document.title = HEAD_TEXT[lang].title;
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && HEAD_TEXT[lang].desc) metaDesc.setAttribute('content', HEAD_TEXT[lang].desc);
     translateTree(document.body);
     if (langBtn) {
       // The button always offers the other language, labelled in that language.
