@@ -287,8 +287,8 @@
   var cvFrameWrap = $('#cv-frame-wrap');
   var cvActions = $('#cv-actions');
   var CV_FILES = {
-    fr: { path: 'cv/CV_Anthony_MERLIN_FR.pdf?v=20261113c', title: 'CV of Anthony Merlin (PDF, French version)' },
-    en: { path: 'cv/CV_Anthony_MERLIN_International.pdf?v=20261113c', title: 'CV of Anthony Merlin (PDF, English version)' }
+    fr: { path: 'cv/CV_Anthony_MERLIN_FR.pdf?v=20261117c', title: 'CV of Anthony Merlin (PDF, French version)' },
+    en: { path: 'cv/CV_Anthony_MERLIN_International.pdf?v=20261117c', title: 'CV of Anthony Merlin (PDF, English version)' }
   };
   var cvShown = null;
   var lastFocus = null;
